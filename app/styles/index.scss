@@ -1,0 +1,334 @@
+// General
+header {
+  background-image: url(/img/header/bg-header.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 66vh;
+}
+
+.company {
+  margin-top: -18vh;
+
+  div {
+    margin: 0;
+    padding: 0;
+  }
+
+  .about {
+    .content {
+      background-color: white;
+      background-image: url(/img/header/bg-company-about.jpg);
+      background-size: cover;
+      padding: 30px;
+      font-family: OpenSans-Light, Times, serif;
+      color: #fff;
+      min-height: 66vh;
+
+      h2 {
+        font-size: 2.4em;
+        text-transform: uppercase;
+        margin-bottom: 0.75em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      a {
+        color: #fff;
+        border-bottom: 1px dashed #fff;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .values {
+    .header {
+      background-color: white;
+      background-image: url(/img/header/bg-greenfield.jpg);
+      background-size: cover;
+      background-position: center center;
+      height: 33vh;
+    }
+
+    .content {
+      background-image: url(/img/papers/bg-papers.jpg);
+      background-position: center center;
+      background-size: cover;
+      padding: 30px;
+      font-family: OpenSans-Light, Times, serif;
+      min-height: 33vh;
+
+      h2 {
+        font-size: 2.4em;
+        margin-bottom: 0.75em;
+      }
+
+      li {
+        font-size: 1.3em;
+      }
+    }
+  }
+}
+
+.docs {
+  background-image: url(/img/papers/bg-iso.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 66vh;
+}
+
+.docs-list {
+  margin-top: -18vh;
+  font-family: OpenSans-Light, Times, serif;
+  color: #000;
+
+  h2 {
+    font-size: 2.4em;
+    margin-bottom: 0.75em;
+    text-transform: uppercase;
+  }
+
+  .documents {
+    background-image: url(/img/papers/bg-papers.jpg);
+    background-position: center center;
+    background-size: cover;
+    padding: 30px;
+
+    h3 {
+      font-size: 1.4em;
+      font-family: OpenSans-Regular, Times, serif;
+    }
+  }
+}
+
+.vectors {
+  background-image: url(/img/vectors/bg-vectors.jpg);
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  height: 66vh;
+}
+
+.vectors-list {
+  padding: 0;
+  margin-top: -18vh;
+  font-family: OpenSans-Light, Times, serif;
+  color: #fff;
+
+  .block1 {
+    div {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-image: url(/img/vectors/bg-header.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 50px;
+      color: #fff;
+      font-family: OpenSans-Light, Times, serif;
+      height: 33vh;
+
+      h2 {
+        font-size: 2.4em;
+        position: absolute;
+        bottom: 90px;
+        text-transform: uppercase;
+      }
+    }
+
+    .picture {
+      background-color: white;
+      background-image: url(/img/vectors/bg-monitors.jpg);
+      background-size: cover;
+      background-position: center center;
+      height: 33vh;
+    }
+  }
+
+  .block2 {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+    .card {
+      border: none;
+      background: none;
+      color: #000;
+      margin-bottom: 1.5em;
+
+      .card-body {
+        padding: 15px 0 0 0;
+
+        .card-title {
+          font-family: OpenSans-Regular, Times, serif;
+          text-transform: uppercase;
+        }
+
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.services {
+  background-image: url(/img/services/bg-services.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 66vh;
+}
+
+.services-list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5vh;
+
+  .block {
+    margin-top: -18vh;
+
+    div {
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+
+      .card {
+        border: none;
+        font-family: OpenSans-Light, Times, serif;
+        margin-bottom: 1.5em;
+
+        .img {
+          background-position: center center;
+          background-size: cover;
+          height: 33vh;
+        }
+
+        h4 {
+          text-transform: uppercase;
+        }
+
+        .card-body {
+          padding-top: 2vh;
+          min-height: 33vh;
+
+          .card-title {
+            font-family: OpenSans-Regular, Times, serif;
+          }
+
+          a {
+            color: #000;
+          }
+        }
+      }
+
+    }
+
+    .list {
+
+      .content {
+        background-image: url(/img/vectors/bg-header.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px;
+        color: white;
+        font-family: OpenSans-Light, Times, serif;
+        height: 100%;
+
+        h2 {
+          font-size: 2.4em;
+          text-transform: uppercase;
+          margin-bottom: 0.75em;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            margin-bottom: 0.5em;
+
+            a {
+              color: #fff;
+              border-bottom: 1px dashed #fff;
+            }
+
+            a:hover {
+              text-decoration: none;
+              border-bottom: 1px solid #fff;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+footer {
+  background-image: url(/img/footer/bg-footer.jpg);
+  background-size: cover;
+  color: #fff;
+  font-family: OpenSans-Light, Times, serif;
+
+  .row {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .logo {
+    margin-bottom: 1em;
+  }
+
+  p, li, a, a:hover {
+    font-size: 0.95em;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  h3 {
+    color: #ccc;
+    font-size: 1.2em;
+  }
+  a, a:hover {
+    color: #fff;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .livarava {
+    p {
+      margin-top: 10px;
+    }
+
+    a {
+      color: #ccc;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  }
+
+  .meta {
+    background-color: #1e1d20;
+    font-size: 0.8em;
+    color: #999;
+  }
+}

@@ -1,0 +1,351 @@
+<!-- NAV BEGIN -->
+<div class="container-fluid navigation navigation-index">
+  <div class="row">
+
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-10">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand" href="#">
+          <img src="/img/header/logo-white-ru.png" width="139" height="40"/>
+        </a>
+
+        {{#if media.isResponsive}}
+          <button {{action 'toggleMenu'}}
+            class="navbar-toggler"
+            type="button">
+            {{#if showMenu}}
+              <i class="fa fa-close"></i>
+            {{else}}
+              <i class="fa fa-bars"></i>
+            {{/if}}
+          </button>
+
+          {{#if showMenu}}
+            <div class="collapse navbar-collapse show in">
+              {{common/index-menu}}
+            </div>
+          {{/if}}
+        {{else}}
+          {{common/index-menu}}
+        {{/if}}
+
+      </nav>
+    </div>
+
+    <div class="col-sm-1"></div>
+  </div>
+</div>
+<!-- NAV END -->
+
+<a name="company"></a>
+
+<!-- HEADER BEGIN -->
+<header class="container-fluid"></header>
+<!-- HEADER END -->
+
+<!-- ABOUT BEGIN -->
+<div class="container-fluid company">
+  <div class="row">
+
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-sm-4 about">
+
+          <div class="content">
+            <h2>
+              {{model.about.title}}
+            </h2>
+            {{#froala-content}}
+              {{{model.about.description}}}
+            {{/froala-content}}
+            <p class="request">
+              {{#link-to "lang.page" 'contacts'}}
+                Сделать заявку <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              {{/link-to}}
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-sm-8 values">
+
+          <div class="header"></div>
+          <div class="content">
+            <h2>{{model.values.title}}</h2>
+            {{#froala-content}}
+              {{{model.values.description}}}
+            {{/froala-content}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-1"></div>
+  </div>
+
+</div>
+<!-- ABOUT BEGIN -->
+
+<a name="papers"></a>
+
+<!-- PAPERS BEGIN -->
+<div class="container-fluid docs"></div>
+<!-- PAPERS END -->
+
+<!-- PAPERS LIST BEGIN -->
+<div class="container-fluid docs-list">
+  <div class="row">
+
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-10">
+
+      <div class="row documents">
+        <div class="col-sm-8">
+          <h2>{{model.docs.title}}</h2>
+
+          {{#froala-content}}
+            {{{model.docs.description}}}
+          {{/froala-content}}
+
+        </div>
+        <div class="col-sm-4">
+          <img class="img-fluid pull-right"
+               src="{{model.docs.image_url}}"
+               alt="diploma">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-1"></div>
+  </div>
+</div>
+<!-- PAPERS LIST END -->
+
+<a name="vectors"></a>
+
+<!-- VECTORS BEGIN -->
+<div class="container-fluid vectors"></div>
+<!-- VECTORS END -->
+
+<!-- VECTORS LIST BEGIN -->
+<div class="container-fluid vectors-list">
+
+  <div class="row">
+    <!-- VECTORS HEADER BEGIN -->
+    <div class="col-sm-12">
+      <div class="container-fluid block1">
+        <div class="row">
+
+          <div class="col-sm-1"></div>
+
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-4 header">
+                <h2>
+                  Направления
+                  деятельности
+                </h2>
+              </div>
+              <div class="col-sm-8 picture"></div>
+            </div>
+          </div>
+
+          <div class="col-sm-1"></div>
+        </div>
+
+      </div>
+    </div>
+    <!-- VECTORS HEADER END -->
+  </div>
+
+  <div class="row">
+
+    <!-- VECTORS LIST BEGIN -->
+    <div class="col-sm-12">
+      <div class="container-fluid block2">
+        <div class="row">
+
+          <div class="col-sm-1"></div>
+
+          <div class="col-sm-10">
+
+            <div class="row">
+
+              {{#each model.directions as |item|}}
+                <div class="col-md-4">
+                  <div class="card">
+                    {{#link-to "lang.page" item.pageName}}
+                      <img class="card-img-top img-fluid"
+                           src="{{item.image_url}}"
+                           alt="Card image cap">
+                    {{/link-to}}
+                    <div class="card-body">
+                      {{#link-to "lang.page" item.pageName}}
+                        <h4 class="card-title">{{item.title}}</h4>
+                      {{/link-to}}
+                    </div>
+                  </div>
+                </div>
+              {{/each}}
+
+            </div>
+
+          </div>
+
+          <div class="col-sm-1"></div>
+        </div>
+
+      </div>
+    </div>
+    <!-- VECTORS LIST END -->
+
+  </div>
+</div>
+<!-- VECTORS END -->
+
+<a name="services"></a>
+
+<!-- SERVICES BEGIN -->
+<div class="container-fluid services"></div>
+<!-- SERVICES END -->
+
+<!-- SERVICES BEGIN -->
+<div class="container-fluid services-list">
+  <div class="row">
+
+
+    <!-- VECTORS HEADER BEGIN -->
+    <div class="col-sm-12">
+      <div class="container-fluid block">
+        <div class="row">
+
+          <div class="col-sm-1"></div>
+
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-8 content">
+
+                <a name="service"></a>
+
+                <div class="card">
+
+                  <div class="img img-fluid"
+                       style="{{model.currentService.imageStyle}}"></div>
+
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      {{model.currentService.title}}
+                    </h4>
+                    <p class="card-text">
+                      {{model.currentService.summary}}
+                    </p>
+                    {{#link-to 'lang.page' model.currentService.pageName}}
+                      <span>Читать далее</span>
+                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    {{/link-to}}
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-sm-4 list">
+
+                <div class="content">
+                  <h2>Услуги</h2>
+
+                  <ul>
+                    {{#if media.isDesktop}}
+                      {{#each model.services as |item|}}
+                        <li>
+                          <a {{action 'setCurrentService' item}}
+                            href="#service">
+                            {{item.title}}</a>
+                        </li>
+                      {{/each}}
+
+                    {{/if}}
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-1"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- SERVICES END -->
+
+<a name="news"></a>
+<a name="application"></a>
+<a name="contacts"></a>
+
+<!-- FOOTER BEGIN -->
+<footer class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-4">
+      <img src="/img/footer/logo.png"
+           alt="НПДЦ Логотип"
+           width="114" height="25"
+           class="logo">
+      <p class="">
+        НПДЦ — лидирующая компания в области технической диагностики,
+        неразрушающего контроля и экспертизы промышленной безопасности в
+        Украине.
+      </p>
+      <p>
+        <a href="tel:+380564049053">+380 (56) 404-90-53</a><br/>
+        <a href="mailto:info@nvdc.biz">info@nvdc.biz</a>
+      </p>
+    </div>
+
+    <div class="col-sm-3">
+      <h3 class="">Свежие записи</h3>
+      <ul class="">
+        <li><a href="#">Международный стандарт ISO/IEC 17020</a></li>
+        <li><a href="#">Компания НПДЦ получила сертификат ISO</a></li>
+        <li><a href="#">ВНИМАНИЕ! 25% скидки на проведение тепловизионного контроля</a></li>
+      </ul>
+    </div>
+
+    <div class="col-sm-3 livarava">
+      <a href="https://www.livarava.com/ru/portfolio/" target="_blank" alt="LivaRava">
+        <img align="right" class="logo_livarava" src="/img/footer/logo_livarava.png">
+      </a>
+      <p>
+        <a href="https://www.livarava.com/ru/portfolio/" target="_blank">
+          Дизайн и разработка сайта
+        </a>
+        <br/>
+        <a href="https://www.livarava.com/neuron/34308/overview" target="_blank">
+          Информация о веб-сайте
+        </a>
+      </p>
+    </div>
+
+    <div class="col-sm-1"></div>
+
+  </div>
+
+  <div class="row meta">
+    <div class="col-sm-12 text-center">
+      © 1993-2017 НПДЦ. Все права защищены.
+    </div>
+  </div>
+</footer>
+<!-- FOOTER END -->

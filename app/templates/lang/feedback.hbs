@@ -1,0 +1,82 @@
+{{#common/common-page}}
+
+  <div class="page">
+    <div class="header" style="{{model.imageStyle}}">
+      <h1>Связь с компанией НПДЦ</h1>
+    </div>
+
+    {{#common/common-content}}
+
+      <div class="mb-4 mt-4">
+
+        {{#if isSent}}
+
+          <div class="alert alert-info">
+            Ваше сообщение успешно отправлено!
+          </div>
+
+          <div class="text-sm-right">
+            <button {{action "reset"}}
+              class="btn btn-primary">
+              Отправить новое сообщение
+            </button>
+          </div>
+
+        {{else}}
+
+          {{#if isError}}
+            <div class="alert alert-danger">
+              Произошла ошибка при отправлении сообщения! Пожалуйста, сообщите об ошибке администратору по адресу <a
+              href="mailto:admin@nvdc.biz">admin@nvdc.biz</a>
+            </div>
+          {{/if}}
+
+          <form {{action 'send' model on="submit"}}>
+
+            <div class="form-group row">
+              <label class="col-sm-3">Тема</label>
+              <div class="btn-group col-sm-9">
+
+                {{input type="text"
+                        class="form-control"
+                        value=subject
+                        placeholder=""
+                        required=true}}
+
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-3">Как мы можем Вам помочь?</label>
+              <div class="col-sm-9">
+
+                {{textarea name="text"
+                           rows="6"
+                           class="form-control"
+                           value=text
+                           placeholder="Опишите в подробных деталях Вашу проблему"
+                           required=true}}
+
+              </div>
+            </div>
+
+            <div class="form-group text-sm-right">
+              <button class="btn btn-primary {{if model.isSaving "disabled"}}" type="submit">
+                {{#if model.isSaving}}
+                  <i class="fa fa-spinner fa-spin"></i> Пожалуйста, ожидайте...
+                {{else}}
+                  <i class="fa fa-send"></i> Отправить
+                {{/if}}
+              </button>
+            </div>
+
+          </form>
+
+        {{/if}}
+
+      </div>
+
+    {{/common/common-content}}
+  </div>
+
+{{/common/common-page}}

@@ -1,0 +1,27 @@
+@import "ember-bootstrap/bootstrap";
+@import "font-awesome";
+@import "fonts";
+@import "index";
+@import "navigation";
+@import "page";
+
+html {
+  min-height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.loading-slider {
+  z-index: 9999;
+
+  span {
+    background-color: #d9534f;
+    height: 4px;
+  }
+}
