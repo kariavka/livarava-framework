@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import config from 'nvdc/config/environment';
+import config from 'livarava-framework/config/environment';
 
 export default Ember.Route.extend({
   // Services

@@ -1,4 +1,4 @@
-import config from 'nvdc/config/environment';
+import config from 'livarava-framework/config/environment';
 
 export default function getApiUrl(functionName, params, method = 'GET') {
   let hostUrl = config.api.host;

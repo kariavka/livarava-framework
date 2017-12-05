@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 import Ember from 'ember';
-import config from 'nvdc/config/environment';
+import config from 'livarava-framework/config/environment';
 
 export default DS.JSONAPIAdapter.extend({
 
