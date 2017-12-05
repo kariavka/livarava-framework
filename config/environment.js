@@ -26,38 +26,27 @@ module.exports = function (environment) {
     api: {
       host: 'https://www.livarava.com',
       path: '/api/v2',
-      key: '52487df8-8440-4658-94c8-d2a0281df969'
+      key: '', // !Setup your LivaRava API key
     },
 
     i18n: {
-      defaultLocale: 'ru',
-      allowedLocales: ['ru', 'uk']
+      defaultLocale: 'en',  // !Setup your default locale
+      allowedLocales: ['en', 'ru', 'uk']  // !Setup your default locales
     },
 
     moment: {
-      includeLocales: ['ru', 'uk']
+      includeLocales: ['en', 'ru', 'uk']
     },
 
     neuronet: {
-      site: 34308,
-      ru: {
-        companyAbout: 123468,
-        companyValues: 123743,
-        docs: 123745,
-        directions: 123866,
-        services: 123840,
-      },
-      uk: {
-        companyAbout: 123742,
-        companyValues: 123744,
-        docs: 123745,
-        directions: 123866,
-        services: 123840,
-      }
+      site: 0, // !Setup your LivaRava Site ID
+      en: {},
+      ru: {},
+      uk: {},
     },
 
     fastboot: {
-      hostWhitelist: ['local.nvdc.biz', /^localhost:\d+$/]
+      hostWhitelist: ['local.yoursite.com', /^localhost:\d+$/]  // !Setup your site domain
     },
   };
 
@@ -65,7 +54,7 @@ module.exports = function (environment) {
     ENV.api = {
       host: 'http://local.livarava.com',
       path: '/api/v2',
-      key: '52487df8-8440-4658-94c8-d2a0281df969'
+      key: '', // !Setup your LivaRava API key
     };
   }
 
