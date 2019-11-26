@@ -1,27 +1,20 @@
 import DS from 'ember-data';
-import Ember from 'ember';
+import {inject as service} from '@ember/service';
+import {computed} from '@ember/object';
 import config from 'livarava-framework/config/environment';
 
 export default DS.JSONAPIAdapter.extend({
+  // Services
+  me: service(),
+  cookies: service(),
 
+  // Variables
   host: config.api.host,
   namespace: 'api/v2',
 
-  // Scope all ajax calls.
-  ajax(url, type, hash) {
-    let key = config.api.key;
-
-    if (Ember.isEmpty(hash)) {
-      hash = {};
-    }
-
-    if (Ember.isEmpty(hash.data)) {
-      hash.data = {};
-    }
-
-    hash.data.key = key;
-
-    return this._super(url, type, hash);
-  }
-
+  // Headers
+  headers: computed('me.token', 'cookies', function () {
+    const token = this.get('me.token') || this.get('cookies').read('token') || config.api.token;
+    return token ? {'X-LivaRava-Token': token} : {};
+  }),
 });
