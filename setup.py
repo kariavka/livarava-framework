@@ -65,9 +65,5 @@ for root, dirnames, filenames in os.walk('app'):
         })
 
 # Update npm
-print("Update npm")
-call(["npm", "install"])
-
-# Update bower
-print("Update bower")
-call(["bower", "install"])
+print("Update packages")
+call(["yarn", "install"])
