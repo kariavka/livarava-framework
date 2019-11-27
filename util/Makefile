@@ -1,3 +1,6 @@
+setup:
+    python setup.py
+
 run:
 	ember serve --environment="local"
 

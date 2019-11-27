@@ -18,6 +18,7 @@
 /.env*
 /.pnp*
 /.sass-cache
+/venv*
 /connect.lock
 /coverage/
 /libpeerconnection.log
