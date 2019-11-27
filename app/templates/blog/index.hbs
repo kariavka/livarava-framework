@@ -1,0 +1,9 @@
+{{#each model.items as |item|}}
+  <div>
+    {{#link-to "blog.item" item.id}}
+      {{item.title}}
+    {{/link-to}}
+  </div>
+{{/each}}
+
+{{outlet}}

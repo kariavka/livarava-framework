@@ -1,4 +1,13 @@
-<i class="fa fa-user"></i>
-Hello, World!
+<div>
+  {{#link-to "blog.index"}}
+    Blog
+  {{/link-to}}
+</div>
+
+<div>
+  <i class="fa fa-user"></i>
+  Hello, World!
+  {{me.fullname}}
+</div>
 
 {{outlet}}

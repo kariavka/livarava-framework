@@ -23,11 +23,20 @@ module.exports = function (environment) {
         },
 
         api: {
-            host: '//www.livarava.com',
-            socketio: '//www.livarava.com',
+            host: 'https://www.livarava.com',
+            socketio: 'https://www.livarava.com',
             namespace: 'api/v2',
             path: '/api/v2',
             token: null,
+            site: 146343
+        },
+
+        moment: {
+            // Options:
+            // 'all' - all years, all timezones
+            // 'subset' - subset of the timezone data to cover 2010-2020 (or 2012-2022 as of 0.5.12). all timezones.
+            // 'none' - no data, just timezone API
+            includeTimezone: 'all'
         },
     };
 
@@ -58,16 +67,18 @@ module.exports = function (environment) {
             namespace: 'api/v2',
             path: '/api/v2',
             token: null,
+            site: null
         };
     }
 
     if (environment === 'master') {
         ENV['api'] = {
-            host: '//www.livarava.com',
-            socketio: '//www.livarava.com',
+            host: 'https://www.livarava.com',
+            socketio: 'https://www.livarava.com',
             namespace: 'api/v2',
             path: '/api/v2',
             token: null,
+            site: null
         };
     }
 
