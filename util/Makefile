@@ -10,9 +10,6 @@ master:
 build:
 	ember build --environment="production"
 
-deploy:
-	scp -r dist/** hospodari@94.130.108.105:/home/hospodari/dist
-
 refresh:
 	git checkout develop; git pull; git checkout master; git pull
 
